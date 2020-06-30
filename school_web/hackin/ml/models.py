@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class mod(models.Model):
 
-    school=models.TextField(unique=False)
+    school=models.CharField(unique=False,max_length=20)
     gender=models.CharField(max_length=10)
-    age=models.CharField(max_length=2)
+    age=models.IntegerField()
     address=models.CharField(max_length=10)
     famsize=models.CharField(max_length=3)
     Pstatus=models.CharField(max_length=10)
@@ -45,7 +45,7 @@ class mod(models.Model):
     def get_famsize(self):
         return self.famsize
     def get_pstatus(self):
-        return self.pstatus
+        return self.Pstatus
     def get_address(self):
         return self.address
     def get_medu(self):
@@ -59,13 +59,13 @@ class mod(models.Model):
     def get_reason(self):
         return self.reason
     def get_guardian(self):
-        return self.guradian
+        return self.guardian
     def get_traveltime(self):
         return self.traveltime
     def get_stime(self):
         return self.stime
     def get_failure(self):
-        return self.failure
+        return self.failures
     def get_schoolsup(self):
         return self.schoolsup
     def get_famsup(self):
@@ -98,3 +98,5 @@ class mod(models.Model):
         return self.g1
     def get_g2(self):
         return self.g2
+    def get_rom(self):
+        return self.rom
