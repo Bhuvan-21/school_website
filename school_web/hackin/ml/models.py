@@ -100,13 +100,13 @@ class mod(models.Model):
         return self.g2
     def get_rom(self):
         return self.rom
-
+"""
 class Products(models.Model):
     school = models.TextField()
     product_type = models.TextField()
     price = models.IntegerField()
-    product_img = models.ImageField()                  
-    size = models.TextField()                  #None for non wearables 
+    product_img = models.ImageField()
+    size = models.TextField()                  #None for non wearables
     nos = models.IntegerField()
     ratings = [models.IntegerField(), models.IntegerField()]
 
@@ -126,4 +126,4 @@ class Products(models.Model):
     def add_rating(self, a:int)
         self.ratings[0] += a
         self.ratings[1] += 5
-
+"""

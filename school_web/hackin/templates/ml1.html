@@ -8,11 +8,16 @@
   <title>Document</title>
 </head>
 <body>
+
 {% load crispy_forms_tags %}
 <form action="." method="POST">{% csrf_token %}
     {{mform|crispy}}
     <button type="submit">submit</button>
 </form>
 <u>{{pr}}</u>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 5%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
 </body>
 </html>

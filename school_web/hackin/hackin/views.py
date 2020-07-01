@@ -80,5 +80,5 @@ def mlview(request):
     else:
         mform=mlform()
     pr=0
-    pr=model.predict(X)
+    pr=model.predict(X)[0][0]
     return render(request,'ml1.html',{'mform':mform,'pr':pr})
