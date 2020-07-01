@@ -18,10 +18,14 @@ from django.urls import path
 from .views import(
 	index,
     mlview,
+    studview,
+    teacherview,
 	)
 
 urlpatterns = [
 	path('',index),
     path('admin/', admin.site.urls),
-    path('ml/',mlview)
+    path('ml/',mlview),
+    path('student/',studview),
+    path('teacher/',teacherview)
 ]

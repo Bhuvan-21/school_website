@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <!--    -->
@@ -5,13 +6,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>Student Home - Schoolify</title>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-        <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" >
+        <link rel="stylesheet" href="{% static "assets/fonts/font-awesome.min.css" %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="{% static "assets/style.css" %}">
         <style>
             table {
                 border-collapse: collapse;
@@ -59,40 +60,40 @@
         <div id = "details" class="jumbotron text-center" style="background-color: white; text-align: left;">
             <h1 style="text-align: center;">Details</h1>
             <div class = "row">
-                
+
                 <div class = "col-sm-6" style="text-align: left; padding: 3%;">
                     <h2>Name: Riya Verma</h2>
                     <h2>Father's name: Mr Aryan Verma</h2>
                     <h2>Mother's name: Ms Arundhati Verma</h2>
                 </div>
-                <div class = "col-sm-6" style="text-align: left; padding: 3%;">    
+                <div class = "col-sm-6" style="text-align: left; padding: 3%;">
                     <h2>Admission ID: 341233</h2>
                     <h2>Email Address: rriya_verma@gmail.com</h2>
                     <h2>School: D.P.S Indirapuram</h2>
                 </div>
-            </div>         
+            </div>
         </div>
         <div id="records" class="jumbotron text-center" style="background-color: white; text-align: left;">
             <h1 style="text-align: center;">Attendance</h1>
             <div class = "row">
-                
+
                 <div class = "col-sm-6" style="text-align: left; padding: 3%;">
                     <h2>Total Working Days: 214</h2>
                     <h2>Days attended: 189</h2>
                     <h2>Half days: 6</h2>
                 </div>
-                <div class = "col-sm-6" style="text-align: left; padding: 3%;">    
+                <div class = "col-sm-6" style="text-align: left; padding: 3%;">
                     <h2>Admission ID: 341233 </h2>
                     <h2>Days missed: 19</h2>
                     <h2>Total attendance: 192/214</h2>
                 </div>
-            </div>    
+            </div>
 
         </div>
         <div class="jumbotron text-center" style="background-color: white; text-align: left;">
             <h1 style="text-align: center;">Mark Sheet</h1>
             <div class = "row">
-                
+
                 <div class = "col-sm-12" style="text-align: left; padding: 3%;">
                     <table>
                         <tr>
@@ -126,11 +127,11 @@
                             <td>92/100</td>
                         </tr>
                     </table>
-            
-                </div>
-                
-            </div>    
 
-        </div> 
+                </div>
+
+            </div>
+
+        </div>
     </body>
 </html>

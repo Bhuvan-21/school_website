@@ -14,7 +14,7 @@ def index(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            return redirect('ml')
+            return redirect('student')
     else:
         form = UserCreationForm()
     return render(request,"index.html",{'form':form})
@@ -50,6 +50,13 @@ dicti={
     'no':0,
     'yes':1,
 }
+
+def studview(request):
+    return render(request, "student_interface.html")
+
+def teacherview(request):
+    return render(request, "teacher_interface.html")
+
 
 def mlview(request):
     X=np.zeros((1,31),dtype=np.int32)
