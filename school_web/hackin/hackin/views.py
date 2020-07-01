@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_list_or_404
 from django.http import HttpResponse
 # Create your views here.
 
@@ -29,10 +29,10 @@ dicti={
     'home':0,
     'reputation':1,
     'course':2,
-    'other':3,
+    'other reason':3,
+    'legal-guardian':2,
     'mother':0,
     'father':1,
-    'other':2,
     'no':0,
     'yes':1,
 }
@@ -81,4 +81,10 @@ def mlview(request):
         mform=mlform()
     pr=0
     pr=model.predict(X)[0][0]
-    return render(request,'ml1.html',{'mform':mform,'pr':pr})
+    absences=X[0][28]
+    dalc=X[0][25]
+    goout=X[0][24]
+    freetime=X[0][23]
+    g1=X[0][29]
+    g2=X[0][30]
+    return render(request,'ml1.html',{'mform':mform,'pr':pr,'absences':absences,'freetime':freetime,'goout':goout,'dalc':dalc,'g1':g1,'g2':g2})
