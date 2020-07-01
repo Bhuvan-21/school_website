@@ -1,9 +1,23 @@
-from django.shortcuts import render,get_list_or_404
+from django.shortcuts import render,get_list_or_404,redirect
 from django.http import HttpResponse
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from sdatabase.forms import UserCreationForm
+from django.views.generic import TemplateView, FormView, CreateView
+from django.contrib.auth import get_user_model
+User=get_user_model()
 # Create your views here.
 
 def index(request):
-    return render(request,"index.html")
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            return redirect('ml')
+    else:
+        form = UserCreationForm()
+    return render(request,"index.html",{'form':form})
 
 import tensorflow as tf
 import numpy as np

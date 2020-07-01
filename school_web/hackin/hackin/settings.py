@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ml',
     'interface',
+    'sdatabase',
     'crispy_forms',
 ]
-
+AUTH_USER_MODEL='sdatabase.CustomUser'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -126,3 +127,4 @@ STATICFILES_DIRS=[
 os.path.join(BASE_DIR, "static"),
 '/var/www/static/',
 ]
+CRISPY_TEMPLATE_PACK='bootstrap4'

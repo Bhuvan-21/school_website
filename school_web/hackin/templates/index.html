@@ -107,7 +107,7 @@
                         <label>
                             <input type="checkbox" checked="checked" name="remember"> Remember me
                         </label><br>
-                        <p style="float: left;"> <a href="#" onclick="document.getElementById('id02').style.display='block'">New User? Sign Up</a><br>
+                        <p style="float: left;"> <a href="#" onclick="document.getElementById('id03').style.display='block'">New User? Sign Up</a><br>
                         <a href="#">Forgot password?</a></p>
                     </div>
 
@@ -131,12 +131,12 @@
                 }
                 </script>
             <div id="id03" class="modal">
-
-                <form class="modal-content animate" action="/action_page.php" method="post" style="color: #f44336;">
+                {% load crispy_forms_tags %}
+                <form class="modal-content animate" action="." method="post" style="color: #f44336;">{% csrf_token %}
 
 
                     <div class="container" style="text-align: left;">
-                        <label for="fname"><b>Full Name</b></label>
+                        <!--<label for="fname"><b>Full Name</b></label>
                         <input class="form-control" type="text" placeholder="Enter Username" name="fname" required>
 
                         <label for="num"><b>Contact Number</b></label><br>
@@ -162,7 +162,8 @@
 
 
                         <label for="psw"><b>Password</b></label>
-                        <input class="form-control" type="password" placeholder="Enter Password" name="psw" required>
+                        <input class="form-control" type="password" placeholder="Enter Password" name="psw" required>-->
+                        {{form|crispy}}
 
                         <button type="submit">Login</button>
                         <label>
