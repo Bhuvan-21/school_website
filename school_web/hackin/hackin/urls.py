@@ -20,12 +20,14 @@ from .views import(
     mlview,
     studview,
     teacherview,
+    ekartview
 	)
 
 urlpatterns = [
 	path('',index),
     path('admin/', admin.site.urls),
     path('ml/',mlview),
-    path('student/',studview),
+    path('ml/student/',studview),
+    path('ml/ekart/',ekartview),
     path('teacher/',teacherview)
 ]

@@ -57,6 +57,8 @@ def studview(request):
 def teacherview(request):
     return render(request, "teacher_interface.html")
 
+def ekartview(request):
+    return render(request, "ecart.html")
 
 def mlview(request):
     X=np.zeros((1,31),dtype=np.int32)

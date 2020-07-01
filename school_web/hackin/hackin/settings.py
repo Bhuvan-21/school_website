@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ml',
     'interface',
     'sdatabase',
+    'ecart',
     'crispy_forms',
 ]
 AUTH_USER_MODEL='sdatabase.CustomUser'

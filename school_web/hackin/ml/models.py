@@ -71,7 +71,7 @@ class mod(models.Model):
     def get_famsup(self):
         return self.familysupport
     def get_paid(self):
-        return self.paid
+        return self.paidsupport
     def get_activities(self):
         return self.activities
     def get_nursery(self):

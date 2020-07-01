@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <!--    -->
@@ -5,13 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Student Home - Schoolify</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" >
+    <link rel="stylesheet" href="{% static "assets/fonts/font-awesome.min.css" %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="{% static "assets/style.css" %}">
 </head>
 <body id="page-top">
     <nav class="navbar navbar-dark navbar-expand-md " id="mainNav" style="background-color: black;">
@@ -25,29 +26,53 @@
         </div>
     </nav>
     <div class="container-fluid" style="text-align: justify-all;">
-        <div class="row" style="padding-top: 30px;">
-            <div class="col-md-2"></div>
-            <div class="col-md-2 product">
-                <img src="assets/img/thumbnails/2.jpg" alt="" style="width: 230px; height: 150px; ">
-                <h4><strong>Product Name</strong></h4>
-                <hr>
-                <button class="btn btn-outline-secondary">Buy</button>
-            </div>
-             <div class="col-md-1"></div>
+         <div class="row" style="padding-top: 30px;">
+             <div class="col-md-2"></div>
              <div class="col-md-2 product">
-                <img src="assets/img/thumbnails/2.jpg" alt="" style="width: 230px; height: 150px">
-                <h4><strong>Product Name</strong></h4>
-                <hr>
-                <button class="btn btn-outline-secondary">Buy</button>
-            </div> 
-             <div class="col-md-1"></div>
-            <div class="col-md-2 product">
-                <img src="assets/img/thumbnails/2.jpg" alt="" style="width: 230px; height: 150px">
-                <h4><strong>Product Name</strong></h4>
-                <hr>
-                <button class="btn btn-outline-secondary">Buy</button>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                 <img src="https://elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-e1464023124869.jpeg" alt="" style="width: 228px; height: 150px; margin-top: 5px; ">
+                 <h4><strong>Books</strong></h4>
+                 <hr>
+                 <button class="btn btn-outline-secondary">Buy</button>
+             </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-2 product">
+                 <img src="https://5.imimg.com/data5/GT/QM/MY-52070189/girl-school-bags-500x500.jpg" alt="" style="width: 228px; height: 170px; margin-top: 5px">
+                 <h4><strong>School Bag</strong></h4>
+                 <hr>
+                 <button class="btn btn-outline-secondary">Buy</button>
+             </div>
+              <div class="col-md-1"></div>
+             <div class="col-md-2 product">
+                 <img src="https://lh3.googleusercontent.com/DuWSdjNdLmmMwM8T4uPlZlJZAlMD2j6m85C6m47XDwj1o0MjF7yKoHLjZTQs5FZQi-6DyGFYbT3IQnfOMQzKWiQyIg=w1000" alt="" style="width: 228px; height: 180px; margin-top: 5px">
+                 <h4><strong>Uniform</strong></h4>
+                 <hr>
+                 <button class="btn btn-outline-secondary">Buy</button>
+             </div>
+         </div>
+             <div class="row" style="padding-top: 30px;">
+             <div class="col-md-2"></div>
+             <div class="col-md-2 product">
+                 <img src="https://lh3.googleusercontent.com/DuWSdjNdLmmMwM8T4uPlZlJZAlMD2j6m85C6m47XDwj1o0MjF7yKoHLjZTQs5FZQi-6DyGFYbT3IQnfOMQzKWiQyIg=w1000" alt="" style="width: 228px; height: 180px; margin-top: 5px ">
+                 <h4><strong>Uniform</strong></h4>
+                 <hr>
+                 <button class="btn btn-outline-secondary">Buy</button>
+             </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-2 product">
+                 <img src="https://elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-e1464023124869.jpeg" alt="" style="width: 228px; height: 150px; margin-top: 5px; ">
+                 <h4><strong>Product Name</strong></h4>
+                 <hr>
+                 <button class="btn btn-outline-secondary">Buy</button>
+             </div>
+              <div class="col-md-1"></div>
+             <div class="col-md-2 product">
+                 <img src="https://5.imimg.com/data5/GT/QM/MY-52070189/girl-school-bags-500x500.jpg" alt="" style="width: 228px; height: 170px">
+                 <h4><strong>School Bag</strong></h4>
+                 <hr>
+                 <button class="btn btn-outline-secondary">Buy</button>
+             </div>
+         </div>
+
+     </div>
+ </body>
+ </html>
