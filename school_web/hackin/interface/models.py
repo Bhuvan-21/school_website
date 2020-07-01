@@ -5,20 +5,13 @@ class Student(models.Model):
     adm_no = models.IntegerField()
     first_name = models.TextField(max_length = 20)
     last_name = models.TextField(max_length = 20)
-<<<<<<< HEAD
     subject = models.TextField(max_length = 20)
-||||||| 85ae26b
-    subject = models.TextField(max_lentgh = 20)
-=======
->>>>>>> 60508e0dfed4954e81f744afb41457e374eea37d
+    subject = models.TextField(max_length = 20)
     working_days = models.IntegerField()
     present_days = models.IntegerField()
     half_days = models.IntegerField()
     absent_days = models.IntegerField()
-<<<<<<< HEAD
-||||||| 85ae26b
-    
-=======
+
     marks_eng_mt = models.IntegerField()
     marks_eng_ft = models.IntegerField()
     marks_math_mt = models.IntegerField()
@@ -34,7 +27,7 @@ class Student(models.Model):
         return self.adm_no
 
     def get_first_name(self):
-        return self.first_name 
+        return self.first_name
 
     def get_last_name(self):
         return self.last_name
@@ -44,7 +37,7 @@ class Student(models.Model):
 
     def get_present_days(self):
         return self.present_days
-    
+
     def get_half_days(self):
         return self.half_days
 
@@ -80,6 +73,3 @@ class Student(models.Model):
 
     def get_marks_sst_ft(self):
         return self.marks_sst_ft
-
-    
->>>>>>> 60508e0dfed4954e81f744afb41457e374eea37d
