@@ -107,8 +107,8 @@ class Products(models.Model):
     school = models.TextField()
     product_type = models.TextField()
     price = models.IntegerField()
-    #product_img = models.ImageField()
-    size = models.TextField()                  #None for non wearables
+    #product_img = models.ImageField()                  
+    size = models.TextField()                  #None for non wearables 
     nos = models.IntegerField()
     ratings = [models.IntegerField(), models.IntegerField()]
 
