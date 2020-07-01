@@ -39,12 +39,37 @@
             </div>
         </div>
     </section>
-    <section id = "details">
-        <div>
-            <h1>{School Name}</h1>
-        </div>
-    </section>
-    <div>
+    <div id = "details" class="jumbotron text-center" style="background-color: white; text-align: left;">
+        <h1 style="text-align: center;">Details</h1>
+        <div class = "row">
+            
+            <div class = "col-sm-6" style="text-align: left; padding: 3%;">
+                <h2>Name: {{first_name}} {{last_name}}</h2>
+                <h2>Father's name: {{F_name}}</h2>
+                <h2>Mother's name: {{M_name}}</h2>
+            </div>
+            <div class = "col-sm-6" style="text-align: left; padding: 3%;">    
+                <h2>Admission ID: {{adm_id}}</h2>
+                <h2>Email Address: {{email_id}}</h2>
+                <h2>School: {{school_name}}</h2>
+            </div>
+        </div>         
+    </div>
+    <div id="records" class="jumbotron text-center" style="background-color: white; text-align: left;">
+        <h1 style="text-align: center;">Attendance</h1>
+        <div class = "row">
+            
+            <div class = "col-sm-6" style="text-align: left; padding: 3%;">
+                <h2>Total Working Days: {{working_days}}</h2>
+                <h2>Days attended: {{present_days}}</h2>
+                <h2>Half days: {{half_days}}</h2>
+            </div>
+            <div class = "col-sm-6" style="text-align: left; padding: 3%;">    
+                <h2>Admission ID: {{adm_id}}</h2>
+                <h2>Days missed: {{absent_days}}</h2>
+                <h2>Total attendance: {{present_days + half_days/2}}/{{total_days}}</h2>
+            </div>
+        </div>    
 
     </div>
 </body>
