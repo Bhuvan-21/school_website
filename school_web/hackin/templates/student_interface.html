@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<!--    -->
+<!-- "{% static  %}">  -->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -29,6 +29,41 @@
             tr:nth-child(even) {
                 background-color: #f2f2f2;
             }
+
+            input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            }
+
+            input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+
+            #issue {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 50%;
+            margin-left:25%;
+            margin-right:25%;
+            }
+            
+    
         </style>
     </head>
     <body id="page-top">
@@ -52,8 +87,8 @@
                     <div class="col offset-lg-8 mx-auto text-center">
                         <h2 class="text-white section-heading">We've got what you need!</h2>
                         <hr class="light my-4">
-                        <p class="text-faded mb-4">Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes are open source, free to download, and easy to use. No strings attached!</p><a class="btn btn-light btn-xl js-scroll-trigger"
-                            role="button" href="#services">Get Started!</a></div>
+                        <p class="text-faded mb-4"></p><a class="btn btn-light btn-xl js-scroll-trigger"
+                            role="button" href="#details">Get Started!</a></div>
                 </div>
             </div>
         </section>
@@ -91,7 +126,7 @@
 
         </div>
         <div class="jumbotron text-center" style="background-color: white; text-align: left;">
-            <h1 style="text-align: center;">Mark Sheet</h1>
+            <h1 style="text-align: center;">Mark Sheet - Academics</h1>
             <div class = "row">
 
                 <div class = "col-sm-12" style="text-align: left; padding: 3%;">
@@ -133,5 +168,84 @@
             </div>
 
         </div>
+        <div class="jumbotron text-center" style="background-color: white; text-align: left;">
+            <h1 style="text-align: center;">Mark Sheet - Co-curricular</h1>
+            <div class = "row">
+
+                <div class = "col-sm-12" style="text-align: left; padding: 3%;">
+                    <table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Mid Term</th>
+                            <th>Final Term</th>
+                        </tr>
+                        <tr>
+                            <td>Behaviour</td>
+                            <td>A+</td>
+                            <td>A+</td>
+                        </tr>
+                        <tr>
+                            <td>Sports</td>
+                            <td>A</td>
+                            <td>A++</td>
+                        </tr>
+                        <tr>
+                            <td>Discipline</td>
+                            <td>A</td>
+                            <td>B+</td>
+                        </tr>
+                        <tr>
+                            <td>Yoga</td>
+                            <td>B+</td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="issue">
+            <h2 style="text-align: center;">Raise an issue!</h2>
+            <form action="/action_page.php">
+                <label for="sub">Subject of the issue</label>
+                <input type="text" id="sub" name="Subject" placeholder="Type here..">
+            
+                <label for="Concerned Dept">Concerned Dept.</label>
+                <select id="country" name="country">
+                    <option value="Teaching">Teaching</option>
+                    <option value="Financial">Financial</option>
+                    <option value="Logistics">Logistics</option>
+                    <option value="Security">Security</option>
+                    <option value="Other">Other</option>
+                </select>
+              
+                <label for="subject">Please provide a detailed description</label>
+                <textarea id="subject" name="subject" placeholder="Type here.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+          
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="section-heading">Let's Get In Touch!</h2>
+                        <hr class="my-4">
+                        <p class="mb-5">Ready to digitalize your school with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true"></i>
+                        <p>123-456-6789</p>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
+                        <p><a href="mailto:your-email@your-domain.com">email@example.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
