@@ -60,6 +60,12 @@ def teacherview(request):
 def ekartview(request):
     return render(request, "ecart.html")
 
+def cartview(request):
+    return render(request, "cart.html")
+    
+def checkoutview(request):
+    return render(request, "checkout.html")
+
 def mlview(request):
     X=np.zeros((1,31),dtype=np.int32)
     model=tf.keras.models.load_model(r'C:\Users\ARYAN JAIN\hack2')

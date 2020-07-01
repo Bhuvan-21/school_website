@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<!--    -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Student Home - Schoolify</title>
+    <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
+    <link rel="stylesheet" href="{% static "assets/fonts/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="{% static "assets/style.css" %}">
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-md " id="mainNav" style="background-color: black;">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Schoolify</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#"><i class="fa fa-cart-plus fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="container-fluid">
+        <div class="row" style="padding: 20px">
+            <div class="col-md-12">
+                <a class="btn btn-outline-primary" href="{% url 'ecart' %}" >&#x2190; Continue Back Shoping</a>
+            </div>
+        </div>
+        <div class="row" style=" padding: 20px">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 jumbotron">
+                <table class="table">
+                    <tr>
+                        <th><h5>Items: <strong>3</strong></h5></th>
+                        <th><h5>Total:<strong> Rs 150</strong></h5></th>
+                        <th>
+                            <a  style="float:right; margin:5px;" class="btn btn-primary" href="{% url 'checkout ' %}">Checkout</a>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        <div class="row" style="padding: 20px;">
+             <div class="col-md-1"></div>
+            <div class="col-md-10 jumbotron">
+                <table class="table">
+                    <tr>
+                    
+                        <th><h5><strong>Items:</strong></h5></th>
+                        <th><h5><strong>Price:</strong></h5></th>
+                        <th><h5><strong>Quantity:</strong></h5></th>
+                        <th><h5><strong>Total:</strong></h5></th>
+                    </tr>
+                    <tr>
+                        
+                        <td><h5>Books</h5></td>
+                        <td><h5>Rs 50</h5></td>
+                        <td><h5>3</h5></td>
+                        <td><h5>150</h5></td>
+                    </tr>
+                </table>
+            
+        </div>
+   
+</body>
+</html>

@@ -20,7 +20,9 @@ from .views import(
     mlview,
     studview,
     teacherview,
-    ekartview
+    ekartview,
+    cartview,
+    checkoutview
 	)
 
 urlpatterns = [
@@ -29,5 +31,7 @@ urlpatterns = [
     path('ml/',mlview),
     path('ml/student/',studview),
     path('ml/ekart/',ekartview),
+    path('ml/ekart/cart',cartview),
+    path('ml/ekart/cart/checkout',checkoutview),
     path('teacher/',teacherview)
 ]
