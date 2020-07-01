@@ -87,4 +87,6 @@ def mlview(request):
     freetime=X[0][23]
     g1=X[0][29]
     g2=X[0][30]
-    return render(request,'ml1.html',{'mform':mform,'pr':pr,'absences':absences,'freetime':freetime,'goout':goout,'dalc':dalc,'g1':g1,'g2':g2})
+    traveltime=X[0][11]
+    stime=X[0][12]
+    return render(request,'ml1.html',{'mform':mform,'traveltime':traveltime,'stime':stime,'pr':pr,'absences':absences,'freetime':freetime,'goout':goout,'dalc':dalc,'g1':g1,'g2':g2})

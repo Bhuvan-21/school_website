@@ -35,6 +35,7 @@ class mod(models.Model):
     absences=models.IntegerField(default=1,validators=[MaxValueValidator(100), MinValueValidator(1)])
     g1=models.IntegerField(default=1,validators=[MaxValueValidator(20), MinValueValidator(1)])
     g2=models.IntegerField(default=1,validators=[MaxValueValidator(20), MinValueValidator(1)])
+    target=models.IntegerField()
     def get_school(self):
         return self.school
     def get_gender(self):
@@ -99,6 +100,8 @@ class mod(models.Model):
         return self.g2
     def get_rom(self):
         return self.rom
+    def get_target(self):
+        return self.target
 
 class Products(models.Model):
     school = models.TextField()
