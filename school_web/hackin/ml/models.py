@@ -104,8 +104,8 @@ class Products(models.Model):
     school = models.TextField()
     product_type = models.TextField()
     price = models.IntegerField()
-    product_img = models.ImageField()                  
-    size = models.TextField()                  #None for non wearables 
+    #product_img = models.ImageField()
+    size = models.TextField()                  #None for non wearables
     nos = models.IntegerField()
     ratings = [models.IntegerField(), models.IntegerField()]
 
@@ -122,7 +122,7 @@ class Products(models.Model):
     def get_rating(self):
         return self.ratings[0]/self.ratings[1]
 
-    def add_rating(self, a:int)
+    def add_rating(self, a:int):
         self.ratings[0] += a
         self.ratings[1] += 5
-
+        pass
