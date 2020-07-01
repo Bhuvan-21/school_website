@@ -103,6 +103,7 @@ class mod(models.Model):
     def get_target(self):
         return self.target
 
+<<<<<<< HEAD
 class Products(models.Model):
     school = models.TextField()
     product_type = models.TextField()
@@ -129,3 +130,32 @@ class Products(models.Model):
         self.ratings[0] += a
         self.ratings[1] += 5
         pass
+||||||| 85ae26b
+class Products(models.Model):
+    school = models.TextField()
+    product_type = models.TextField()
+    price = models.IntegerField()
+    #product_img = models.ImageField()                  
+    size = models.TextField()                  #None for non wearables 
+    nos = models.IntegerField()
+    ratings = [models.IntegerField(), models.IntegerField()]
+
+    def get_price(self):
+        return self.price
+
+    def check_stock(self):
+        return (self.nos>0)
+
+    def bought(self):
+        self.nos -= 1
+        pass
+
+    def get_rating(self):
+        return self.ratings[0]/self.ratings[1]
+
+    def add_rating(self, a:int):
+        self.ratings[0] += a
+        self.ratings[1] += 5
+        pass
+=======
+>>>>>>> 60508e0dfed4954e81f744afb41457e374eea37d
