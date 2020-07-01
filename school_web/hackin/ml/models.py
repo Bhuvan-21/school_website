@@ -7,30 +7,30 @@ class mod(models.Model):
     gender=models.CharField(max_length=10,choices=(('M','Male'),('F','Female')))
     age=models.IntegerField()
     address=models.CharField(max_length=10,choices=(('U','Urban'),('R','Rural')))
-    famsize=models.CharField(max_length=3,choices=(('LE3','Less than 3'),('GT3','Greater than 3')))
-    Pstatus=models.CharField(max_length=10,choices=(('T','Together'),('A','Apart')))
-    Medu=models.CharField(max_length=10,choices=(('0','None'),('1','primary education'),('2','5th to 9th grade'),('3','secondary education'),('4','higher education')))
-    Fedu=models.CharField(max_length=10,choices=(('0','None'),('1','primary education'),('2','5th to 9th grade'),('3','secondary education'),('4','higher education')))
-    Mjob=models.CharField(max_length=10,choices=(('at_home','at_home'),('health','health'),('civil-services','civil-services'),('teacher','teacher'),('other','other')))
-    Fjob=models.CharField(max_length=10,choices=(('at_home','at_home'),('health','health'),('civil-services','civil-services'),('teacher','teacher'),('other','other')))
-    reason=models.CharField(max_length=10,choices=(('home','home'),('reputation','reputation'),('course','course'),('other','other')))
+    familysize=models.CharField(max_length=3,choices=(('LE3','Less than 3'),('GT3','Greater than 3')))
+    Parentalstatus=models.CharField(max_length=10,choices=(('T','Together'),('A','Apart')))
+    Mothereducation=models.CharField(max_length=10,choices=(('0','None'),('1','primary education'),('2','5th to 9th grade'),('3','secondary education'),('4','higher education')))
+    Fathereducation=models.CharField(max_length=10,choices=(('0','None'),('1','primary education'),('2','5th to 9th grade'),('3','secondary education'),('4','higher education')))
+    Motherjob=models.CharField(max_length=10,choices=(('at_home','at_home'),('health','health'),('civil-services','civil-services'),('teacher','teacher'),('other','other')))
+    Fatherjob=models.CharField(max_length=10,choices=(('at_home','at_home'),('health','health'),('civil-services','civil-services'),('teacher','teacher'),('other','other')))
+    reasontojoinschool=models.CharField(max_length=10,choices=(('home','home'),('reputation','reputation'),('course','course'),('other','other')))
     guardian=models.CharField(max_length=10,choices=(('mother','mother'),('father','father'),('legal-guardian','legal-guardian')))
     traveltime=models.CharField(max_length=10,choices=(('0','<15min'),('1','15 to 30 min.'),('2','30 min. to 1 hour'),('3','>1 hour')))
-    stime=models.CharField(max_length=10,choices=(('0','<120min'),('1','120 to 180 min.'),('2','300 min. to 10 hours'),('3','>10 hours')))
+    studytime=models.CharField(max_length=10,choices=(('0','<120min'),('1','120 to 180 min.'),('2','300 min. to 10 hours'),('3','>10 hours')))
     failures=models.CharField(max_length=1)
-    schoolsup=models.CharField(max_length=3,choices=(('no','NO'),('yes','Yes')))
-    famsup=models.CharField(max_length=3,choices=(('no','NO'),('yes','Yes')))
-    paid=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
+    schoolsupport=models.CharField(max_length=3,choices=(('no','NO'),('yes','Yes')))
+    familysupport=models.CharField(max_length=3,choices=(('no','NO'),('yes','Yes')))
+    paidsupport=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
     activities=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
     nursery=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
-    higher=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
+    highereducation=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
     internet=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
-    famrel=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
-    rom=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
+    familyrelations=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
+    romanticrelationship=models.CharField(max_length=10,choices=(('no','NO'),('yes','Yes')))
     freetime=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
     goout=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
-    dalc=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
-    walc=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
+    dailyalcohol=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
+    weekendalcohol=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
     health=models.IntegerField(default=1,validators=[MaxValueValidator(5), MinValueValidator(1)])
     absences=models.IntegerField(default=1,validators=[MaxValueValidator(100), MinValueValidator(1)])
     g1=models.IntegerField(default=1,validators=[MaxValueValidator(20), MinValueValidator(1)])
@@ -43,33 +43,33 @@ class mod(models.Model):
     def get_age(self):
         return self.age
     def get_famsize(self):
-        return self.famsize
+        return self.familysize
     def get_pstatus(self):
-        return self.Pstatus
+        return self.Parentalstatus
     def get_address(self):
         return self.address
     def get_medu(self):
-        return self.Medu
+        return self.Mothereducation
     def get_fedu(self):
-        return self.Fedu
+        return self.Fathereducation
     def get_mjob(self):
-        return self.Mjob
+        return self.Motherjob
     def get_fjob(self):
-        return self.Fjob
+        return self.Fatherjob
     def get_reason(self):
-        return self.reason
+        return self.reasontojoinschool
     def get_guardian(self):
         return self.guardian
     def get_traveltime(self):
         return self.traveltime
     def get_stime(self):
-        return self.stime
+        return self.studytime
     def get_failure(self):
         return self.failures
     def get_schoolsup(self):
-        return self.schoolsup
+        return self.schoolsupport
     def get_famsup(self):
-        return self.famsup
+        return self.familysupport
     def get_paid(self):
         return self.paid
     def get_activities(self):
@@ -77,19 +77,19 @@ class mod(models.Model):
     def get_nursery(self):
         return self.nursery
     def get_higher(self):
-        return self.higher
+        return self.highereducation
     def get_internet(self):
         return self.internet
     def get_famrel(self):
-        return self.famrel
+        return self.familyrelations
     def get_freetime(self):
         return self.freetime
     def get_goout(self):
         return self.goout
     def get_dalc(self):
-        return self.dalc
+        return self.dailyalcohol
     def get_walc(self):
-        return self.walc
+        return self.weekendalcohol
     def get_health(self):
         return self.health
     def get_absences(self):
@@ -99,7 +99,7 @@ class mod(models.Model):
     def get_g2(self):
         return self.g2
     def get_rom(self):
-        return self.rom
+        return self.romanticrealtionship
     def get_target(self):
         return self.target
 
@@ -107,8 +107,8 @@ class Products(models.Model):
     school = models.TextField()
     product_type = models.TextField()
     price = models.IntegerField()
-    #product_img = models.ImageField()                  
-    size = models.TextField()                  #None for non wearables 
+    #product_img = models.ImageField()
+    size = models.TextField()                  #None for non wearables
     nos = models.IntegerField()
     ratings = [models.IntegerField(), models.IntegerField()]
 
