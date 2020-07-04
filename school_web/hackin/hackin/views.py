@@ -1,5 +1,6 @@
 from django.shortcuts import render,get_list_or_404,redirect
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from sdatabase.forms import UserCreationForm
@@ -14,7 +15,7 @@ def index(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            return redirect('student')
+            return HttpResponseRedirect(reverse('student'))
     else:
         form = UserCreationForm()
     return render(request,"index.html",{'form':form})
@@ -62,7 +63,7 @@ def ekartview(request):
 
 def cartview(request):
     return render(request, "cart.html")
-    
+
 def checkoutview(request):
     return render(request, "checkout.html")
 

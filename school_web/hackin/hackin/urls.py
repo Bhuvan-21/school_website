@@ -29,8 +29,8 @@ urlpatterns = [
 	path('',index),
     path('admin/', admin.site.urls),
     path('ml/',mlview),
-    path('ml/student/',studview),
-    path('ml/ekart/',ekartview),
+    path('ml/student/',studview, name="student"),
+    path('ekart/',ekartview,name="cart"),
     path('ml/ekart/cart',cartview),
     path('ml/ekart/cart/checkout',checkoutview),
     path('teacher/',teacherview)
