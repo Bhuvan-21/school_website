@@ -20,6 +20,8 @@ def index(request):
         form = UserCreationForm()
     return render(request,"index.html",{'form':form})
 
+def checkoutview(request):
+    return render(request,"checkout.html")
 import tensorflow as tf
 import numpy as np
 from tensorflow import keras

@@ -26,12 +26,11 @@ from .views import(
 	)
 
 urlpatterns = [
-	path('',index),
+	path('',index,name="index"),
     path('admin/', admin.site.urls),
-    path('ml/',mlview),
-    path('ml/student/',studview, name="student"),
+    path('ml/',mlview,name="ml"),
+    path('student/',studview, name="student"),
     path('ekart/',ekartview,name="cart"),
-    path('ml/ekart/cart',cartview),
-    path('ml/ekart/cart/checkout',checkoutview),
+    path('checkout/',checkoutview,name="checkout"),
     path('teacher/',teacherview)
 ]
